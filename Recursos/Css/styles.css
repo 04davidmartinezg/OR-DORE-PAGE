@@ -1,28 +1,8 @@
 
-:root {
-  --dorado: #D4AF37;
-  --marfil: #F5E9D3;
-  --arena: #D8C3A5;
-  --espresso: #4A2C20;
-  --negro: #0B0B0B;
-
-  --fondo: var(--arena);        
-  --cabecera: #DDD8D2;          
-  --tarjeta: var(--marfil);     
-  --barra: #EADBBC;             
-  --texto: var(--espresso);
-
-  --ancho: 1200px;              
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
-  background: var(--fondo);
-  color: var(--texto);
+  background: #D8C3A5;
+  color: #4A2C20;
   font-family: Montserrat, system-ui, sans-serif;
   line-height: 1.6;
 }
@@ -36,7 +16,7 @@ h1, h2, h3, .logo {
 
 a { color: inherit; }
 
-:focus-visible { outline: 2px solid var(--dorado); outline-offset: 3px; }
+:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
 
 header {
   position: relative;               
@@ -44,7 +24,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.9rem 2rem;
-  background: var(--cabecera);
+  background: #DDD8D2;
 }
 
 .logo { font-size: 1.4rem; text-decoration: none; }
@@ -58,7 +38,7 @@ nav ul {
 }
 
 nav a { text-decoration: none; font-size: 0.95rem; }
-nav a:hover { color: var(--dorado); }
+nav a:hover { color: #D4AF37; }
 
 
 #menu-btn {
@@ -93,21 +73,21 @@ nav a:hover { color: var(--dorado); }
 
 .btn {
   padding: 0.85rem 2rem;
-  border: 1px solid var(--negro);
+  border: 1px solid #0B0B0B;
   font-weight: 500;
   text-decoration: none;
-  background: var(--negro);
+  background: #0B0B0B;
   color: #fff;
   transition: all 0.2s ease;
 }
 
-.btn-lleno { background: var(--negro); color: #fff; }
-.btn-borde { background: transparent; color: var(--negro); }
+.btn-lleno { background: #0B0B0B; color: #fff; }
+.btn-borde { background: transparent; color: #0B0B0B; }
 
 .btn:hover {
-  background: var(--espresso);
-  border-color: var(--espresso);
-  color: var(--marfil);
+  background: #4A2C20;
+  border-color: #4A2C20;
+  color: #F5E9D3;
 }
 
 @keyframes entrada { from { opacity: 0; } to { opacity: 1; } }
@@ -118,7 +98,7 @@ nav a:hover { color: var(--dorado); }
 
 
 section {
-  max-width: var(--ancho);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
@@ -133,14 +113,14 @@ section h2 { font-size: 1.8rem; margin-bottom: 2rem; }
 
 .tarjeta .foto {
   aspect-ratio: 4 / 5;                      
-  background: var(--tarjeta);
-  border-bottom: 2px solid var(--dorado);    
+  background: #F5E9D3;
+  border-bottom: 2px solid #D4AF37;    
 }
 
 .tarjeta .info {
   margin-top: 0.7rem;
   padding: 1rem 1.2rem;
-  background: var(--barra);
+  background: #EADBBC;
 }
 
 .tarjeta h3 { font-size: 1.1rem; }
@@ -151,7 +131,7 @@ section h2 { font-size: 1.8rem; margin-bottom: 2rem; }
 
 footer {
   padding: 2.5rem 1.5rem;
-  background: var(--cabecera);
+  background: #DDD8D2;
   text-align: center;
 }
 
@@ -169,7 +149,7 @@ footer .botones { margin-bottom: 1rem; }
     right: 0;
     z-index: 2;
     padding: 1rem 1.2rem;
-    background: var(--cabecera);
+    background: #DDD8D2;
   }
 
   nav.abierto { display: block; }  
