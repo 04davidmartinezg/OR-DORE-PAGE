@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Or Doré</title>
+<link rel="stylesheet" href="Recursos/Css/styles.css">
 </head>
 <body>
+<header id="inicio">
+  <a class="logo" href="#inicio">Or Doré</a>
+  <button id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+  <nav id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#colecciones">Colecciones</a></li>
+      <li><a href="#colecciones">Galería</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
+<main>
+  <div class="hero">
+    <div>
+      <h1>Cada vela tiene su alma</h1>
+      <p>Velas de diseño que unen luz, aroma y arte, pensadas para ser un recuerdo que dure.</p>
+      <div class="botones">
+        <a class="btn btn-lleno" href="#colecciones">Ver colección</a>
+        <a class="btn btn-borde" href="#contacto">Contactar</a>
+      </div>
+    </div>
+  </div>
+  <section id="colecciones">
+    <h2>Colección actual</h2>
+    <div class="grid" id="productos"></div>
+  </section>
+  <section id="nosotros">
+    <h2>Recuerdos que duran</h2>
+    <p>Or Doré nació porque no existía una vela que combinara diseño, luz y aroma. Cada pieza se crea con cera vegetal y se piensa como un detalle para regalar o para conservar.</p>
+  </section>
+</main>
+<footer id="contacto">
+  <div class="botones">
+    <a class="btn btn-lleno" href="https://wa.me/570000000000" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+  <small>© 2026 Or Doré</small>
+</footer>
+
+<script src="Recursos/JS/Script.js"></script>
 </body>
 </html>
