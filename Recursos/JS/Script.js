@@ -32,10 +32,14 @@ const aboutMenu = document.querySelector(".about-menu");
 function closeNavigation() {
   navigation?.classList.remove("open");
   menuButton?.setAttribute("aria-expanded", "false");
+  if (menuButton) menuButton.textContent = "Menú ☰";
+  if (aboutMenu) aboutMenu.open = false;
 }
 menuButton?.addEventListener("click", () => {
   const open = navigation.classList.toggle("open");
   menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.textContent = open ? "Cerrar ×" : "Menú ☰";
+  if (!open && aboutMenu) aboutMenu.open = false;
 });
 navigation?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
   closeNavigation();
@@ -53,4 +57,15 @@ document.addEventListener("keydown", event => {
     closeNavigation();
     menuButton.focus();
   }
+});
+
+// Cerrar al hacer clic o mover el foco fuera del panel y su botón.
+function isOutsideMenu(target) {
+  return navigation && !navigation.contains(target) && !menuButton.contains(target);
+}
+document.addEventListener("click", event => {
+  if (isOutsideMenu(event.target)) closeNavigation();
+});
+document.addEventListener("focusin", event => {
+  if (isOutsideMenu(event.target)) closeNavigation();
 });
