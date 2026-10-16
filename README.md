@@ -18,3 +18,7 @@ Las imágenes se presentan como cuadros vacíos. Los catálogos tienen tres posi
 Paleta: #D4AF37, #F5E9D3, #D8C3A5, #4A2C20, #0B0B0B.
 
 Los cambios se mantienen únicamente en el dispositivo, sin commit ni publicación.
+
+## Variante de menú horizontal
+
+En las páginas interiores, el botón Menú abre y cierra la navegación. Se cierra también con Escape, clic fuera o al navegar. El inicio conserva sus dos acciones. No se añadieron animaciones.
