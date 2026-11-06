@@ -264,3 +264,17 @@ h1{font-size:clamp(38px,4.2vw,62px);letter-spacing:-1.5px}
 .site-foot>.logo,.footer-contact{grid-column:1/-1}
 .contact-guide{padding-top:0}.page-heading{margin-bottom:32px}
 }
+
+/* Paleta de marca, aplicada con superficies lisas y acentos contenidos. */
+.header { background-color:#DCCCB8; border-bottom-color:rgba(139,138,107,.3); }
+.menu-toggle { background-color:#F7F3ED; border-color:#8B8A6B; }
+.button { background-color:#1A1A1A; border-color:#1A1A1A; }
+.button:hover { background-color:#555640; border-color:#555640; }
+.button.secondary { background-color:#F7F3ED; border-color:#8B8A6B; }
+.button.secondary:hover { background-color:#DCCCB8; }
+.site-foot { background-color:#DCCCB8; }
+.page-heading .eyebrow,.catalog-label,.trail { color:#626348; }
+.manifest .seal { background-color:#DCCCB8; }
+.principles article { border-top-color:#D4AF7C; }
+.service-strip { border-top-color:#8B8A6B; }
+.ficha .button { border-bottom-color:#D4AF7C; }
