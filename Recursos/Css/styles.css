@@ -225,3 +225,42 @@ body {
 }
 .photo-actions button { background-color: var(--ivory); }
 
+
+/* Dirección minimalista validada: PB-05, PB-08, PB-10. */
+.page-section{max-width:1320px;padding:72px 7% 88px}
+.page-heading{border:0;padding-bottom:0;margin-bottom:52px}
+h1{font-size:clamp(38px,4.2vw,62px);letter-spacing:-1.5px}
+.page-heading p,.brand-lead{max-width:570px;font-size:15px;line-height:1.85}
+.eyebrow{font-size:9px;letter-spacing:2.2px}
+.three-columns{gap:36px}
+.product-card,.collection-card,.gallery figure{border:0;background:transparent}
+.product-card .card-caption,.collection-card .card-caption,.gallery figcaption{border:0;padding:20px 0;background:transparent}
+.product-card .card-caption h2{font-size:25px;letter-spacing:-.5px}
+.card-caption .arrow{border:0}
+.service-strip{background:transparent;border-top:1px solid var(--line);margin:0 auto;padding:50px 7%;max-width:1320px}
+.service-strip h2{font-size:32px}.service-strip p{font-size:14px}
+.site-foot{background:var(--ivory);grid-template-columns:1.3fr 1fr 1fr 1.6fr;border-top:1px solid var(--line);padding:48px 7%;gap:32px}
+.footer-contact p{font-size:11px;margin:8px 0 0}
+.manifest{background:#eee9e1}.manifest .seal{background:transparent}
+.principles article,.contact-page aside{border-top:1px solid var(--line)}
+.contact-page aside{background:transparent;padding:32px 0}
+.contact-guide{padding-top:0;min-height:0}
+.gallery-series h2{border:0;padding:0;font-size:32px}
+.product-card:hover,.collection-card:hover,.gallery figure:hover{box-shadow:none}
+.collection-intro{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center;margin-bottom:76px}
+.collection-intro .page-heading{margin:0}
+.collection-preview{display:block;text-align:center}
+.collection-preview img{display:block;width:100%;height:340px;object-fit:contain;background:white}
+.collection-preview span{display:block;font-size:11px;padding:14px 0}
+.catalog-label{font:11px/1.5 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+@media(prefers-reduced-motion:no-preference){
+.product-card,.collection-card,.ficha,.gallery-series,.gallery figure.en-vista{animation:none}
+.product-link .catalog-image,.collection-card .catalog-image{transition:filter .2s}
+.product-link:hover .catalog-image,.collection-card:hover .catalog-image{filter:brightness(.98);outline:none}
+}
+@media(max-width:760px){
+.page-section{padding:42px 6% 56px}.collection-intro{grid-template-columns:1fr;gap:25px;margin-bottom:40px}
+.collection-preview img{height:280px}.site-foot{grid-template-columns:1fr 1fr}
+.site-foot>.logo,.footer-contact{grid-column:1/-1}
+.contact-guide{padding-top:0}.page-heading{margin-bottom:32px}
+}

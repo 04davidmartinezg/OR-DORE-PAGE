@@ -19,6 +19,21 @@ if (catalogo) {
     document.getElementById("catalog-title").textContent = coleccion.nombre;
     document.getElementById("catalog-description").textContent = coleccion.descripcion;
     const grupos = { gruta: [1,5,6,2,7,4,9,10,11,3], cafe: [8], amor: [12,13,14,15,16,17,18] };
+    const destacado = { gruta:1, cafe:8, amor:14 }[key];
+    const intro = document.createElement('div');
+    intro.className = 'collection-intro';
+    const heading = document.querySelector('.page-heading');
+    heading.before(intro);
+    intro.append(heading);
+    const preview = document.createElement('a');
+    preview.href = 'producto.html?id='+destacado;
+    preview.className = 'collection-preview';
+    preview.innerHTML = `<img src="${foto(destacado)}" alt="${nombres[destacado-1]}"><span>Descubrir ${nombres[destacado-1]} ↗</span>`;
+    intro.append(preview);
+    const listHeading = document.createElement('h2');
+    listHeading.className = 'catalog-label';
+    listHeading.textContent = 'Piezas de la colección';
+    catalogo.before(listHeading);
     for (const id of grupos[key]) {
       const card = document.createElement("article");
       card.className = "product-card";
