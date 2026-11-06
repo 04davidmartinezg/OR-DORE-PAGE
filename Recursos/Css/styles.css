@@ -118,7 +118,7 @@ footer p, footer > a:last-child { font-size: 12px; margin: 0; }
   #navigation .submenu a { padding: 8px 4px; overflow-wrap: anywhere; }
 }
 /* Fotografías reales: producto completo sobre blanco y galería ambiental. */
-.catalog-image { display:block; width:100%; aspect-ratio:4/5; object-fit:contain; background:rgb(0, 0, 0); filter: brightness(.72); transition: transform .5s ease-in-out, filter .5s ease-in-out; transform-origin: center; }
+.catalog-image { display:block; width:100%; aspect-ratio:4/5; object-fit:contain; background:var(--ivory); filter: brightness(.72); transition: transform .5s ease-in-out, filter .5s ease-in-out; transform-origin: center; }
 .gallery img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; filter: brightness(.72); transition: transform .5s ease-in-out, filter .5s ease-in-out; transform-origin: center; }
 .product-link { display:block; }
 .product-link:hover .catalog-image, .collection-card:hover .catalog-image { outline:1px solid var(--gold); transform: scale(1.06); }
@@ -149,10 +149,10 @@ footer { background: var(--sand); color: var(--black); border-top: 1px solid var
 .gallery figcaption { padding: 18px; border: 0; border-top: 2px solid var(--gold); color: var(--black); }
 .product-card .catalog-image,
 .collection-card .catalog-image,
-.ficha .catalog-image { aspect-ratio: 15/16; object-fit: contain; background: white; }
+.ficha .catalog-image { aspect-ratio: 15/16; object-fit: contain; background: var(--ivory); }
 .gallery-series { margin-top: 4rem; }
 .gallery-series h2 { border-left: 5px solid var(--olive); padding-left: 1rem; }
-.gallery img { object-fit: contain; background: var(--sand); }
+.gallery img { object-fit: contain; background: var(--ivory); }
 .ficha { align-items: center; }
 .ficha dl { display: grid; grid-template-columns: auto 1fr; gap: .5em 1.4em; border-block: 1px solid var(--sand); padding: 1em 0; margin: 1.5em 0; }
 .ficha dt { font-weight: bold; }
@@ -221,7 +221,7 @@ footer { background: var(--sand); color: var(--black); border-top: 1px solid var
 /* Composición editorial y servicios. */
 .page-heading { padding-bottom: 26px; border-bottom: 1px solid var(--sand); }
 .page-heading p { font-size: 16px; line-height: 1.7; max-width: 640px; }
-.collection-card .catalog-image { object-fit: cover; aspect-ratio: 4/4.7; }
+.collection-card .catalog-image { object-fit: cover; aspect-ratio: 4/4.7; mix-blend-mode: multiply; }
 .collection-card .card-caption { align-items: flex-start; padding: 22px; }
 .collection-card .card-caption p { font-size: 14px; }
 .service-strip { max-width: 1200px; margin: 0 auto 60px; padding: 40px 6%; background: #e9e6d8; border-top: 2px solid var(--olive); display: grid; grid-template-columns: 1fr 1fr; gap: 7%; align-items: center; }
@@ -269,7 +269,7 @@ footer { background: var(--sand); color: var(--black); border-top: 1px solid var
 /* Textura de fondo. */
 :root { --papel: url("../imagenes/papel.svg"); }
 body { background-image: var(--papel); background-size: 150px 150px; }
-.home { background-image: var(--papel), radial-gradient(ellipse at center, #fffdf8, var(--ivory) 55%, #eee3d4); background-size: 150px 150px, cover; }
+.home { background-image: var(--papel), radial-gradient(ellipse at center, #D8C3A5, var(--ivory) 55%, #eee3d4); background-size: 150px 150px, cover; }
 .photo-actions button { background-color: var(--ivory); }
 /* Ajustes visuales finales de páginas, tarjetas y catálogo. */
 .page-section { max-width: 1320px; padding: 72px 7% 88px; }
@@ -305,7 +305,7 @@ h1 { font-size: clamp(38px, 4.2vw, 62px); letter-spacing: -1.5px; }
 .collection-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 9%; align-items: center; margin-bottom: 76px; }
 .collection-intro .page-heading { margin: 0; }
 .collection-preview { display: block; text-align: center; }
-.collection-preview img { display: block; width: 100%; height: 340px; object-fit: contain; background: white; }
+.collection-preview img { display: block; width: 100%; height: 340px; object-fit: contain; background: var(--ivory); }
 .collection-preview span { display: block; font-size: 11px; padding: 14px 0; }
 .catalog-label { font: 11px/1.5 Arial, sans-serif; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
 @media (prefers-reduced-motion: no-preference) {
@@ -330,13 +330,13 @@ h1 { font-size: clamp(38px, 4.2vw, 62px); letter-spacing: -1.5px; }
   .page-heading { margin-bottom: 32px; }
 }
 /* Colores finales de marca. */
-.header { background-color: #DCCCB8; border-bottom-color: rgba(139, 138, 107, .3); }
+.header { background-color: #dcccb8; border-bottom-color: rgba(139, 138, 107, .3); }
 .menu-toggle { background-color: #F7F3ED; border-color: #8B8A6B; }
 .button { background-color: #1A1A1A; border-color: #1A1A1A; }
 .button:hover { background-color: #555640; border-color: #555640; }
 .button.secondary { background-color: #F7F3ED; border-color: #8B8A6B; }
 .button.secondary:hover { background-color: #DCCCB8; }
-.site-foot { background-color: #DCCCB8; }
+.site-foot { background-color: #3a3939; color: #F7F3ED; }
 .page-heading .eyebrow,
 .catalog-label,
 .trail { color: #626348; }
