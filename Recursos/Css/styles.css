@@ -344,3 +344,142 @@ h1 { font-size: clamp(38px, 4.2vw, 62px); letter-spacing: -1.5px; }
 .principles article { border-top-color: #D4AF7C; }
 .service-strip { border-top-color: #8B8A6B; }
 .ficha .button { border-bottom-color: #D4AF7C; }
+
+/* Galería independiente, sin marcos ni franjas de relleno. */
+.gallery-filters{display:flex;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.gallery-filters button{padding:10px 0;background:var(--ivory);border:0;border-bottom:2px solid transparent;color:var(--coffee);font-size:13px}
+.gallery-filters button[aria-pressed="true"]{border-bottom-color:#98713e}
+#gallery-count{font-size:11px;margin:18px 0 26px;color:#626348}
+.curated{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:38px 26px}
+.curated figure{margin:0;min-width:0;background:none;border:0}
+.gallery-open{display:block;width:100%;border:0;padding:0;background:var(--sand);overflow:hidden;cursor:zoom-in}
+.curated .gallery-open img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;background:none;transition:transform .4s ease}
+.curated .gallery-open:hover img{transform:scale(1.025)}
+.curated figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:14px 0;font-size:12px;letter-spacing:0}
+.curated figcaption a{font-size:11px;text-decoration:underline;text-underline-offset:4px}
+.gallery-end{text-align:center;margin-top:70px;padding:44px 0;border-top:1px solid var(--line)}
+.gallery-end h2{font-size:34px}
+#gallery-viewer{border:0;background:var(--ivory);color:var(--coffee);padding:40px 22px 22px;max-width:880px;width:90vw;max-height:95svh;overflow:auto}
+#gallery-viewer::backdrop{background:#1a1a1ad9}
+#viewer-image{display:block;height:65svh;max-width:100%;object-fit:contain;margin:auto}
+#viewer-close{position:absolute;right:12px;top:4px;background:none;border:0;font-size:30px;color:inherit}
+.viewer-caption{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:18px;text-align:center}
+.viewer-caption h2{font-size:24px;margin:0}
+.viewer-caption button{background:none;border:1px solid var(--line);width:42px;height:42px;color:inherit;flex-shrink:0}
+.viewer-caption button:disabled{opacity:.3}
+.gallery-modal-open{overflow:hidden}
+/* Le blanc des photographies produit se fond dans le fond crème sans modifier les originaux. */
+.product-card .catalog-image,.ficha .catalog-image,.collection-preview img{background:transparent;mix-blend-mode:multiply}
+.collection-card .catalog-image{object-fit:cover;background:transparent}
+#navigation.open{flex-wrap:wrap}
+@media(max-width:760px){.curated{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px}.gallery-filters{gap:12px 20px}.viewer-caption h2{font-size:21px}}
+@media(max-width:440px){.curated{grid-template-columns:1fr}.curated .gallery-open img{aspect-ratio:4/5}}
+@media(prefers-reduced-motion:reduce){.curated .gallery-open img{transition:none;transform:none}}
+/* Conservar el color real y evitar el recuadro gris causado por el oscurecimiento. */
+.catalog-image,.gallery img,.collection-preview img,.product-card:hover .catalog-image,.collection-card:hover .catalog-image,.gallery figure:hover img{filter:none}
+.collection-card .catalog-image,.gallery img{mix-blend-mode:normal}
+.product-card:hover .catalog-image,.collection-card:hover .catalog-image{transform:none}
+
+/* Composiciones editoriales: imagen protagonista, tríptico y parejas. */
+.gallery.curated { display:block; }
+.gallery-composition { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:28px; align-items:center; }
+.gallery-composition figure { grid-column:span 3; }
+.composition-lead figure:first-child { grid-column:span 6; }
+.composition-reverse figure:last-child { grid-column:span 6; }
+.composition-pairs { grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 32px; }
+.composition-pairs figure { grid-column:auto; }
+.composition-pairs figure:nth-child(even) { margin-top:80px; }
+.composition-solo { display:block; }
+.curated .gallery-open img { aspect-ratio:3/4; }
+.gallery-chapter + .gallery-chapter { margin-top:100px; padding-top:72px; border-top:1px solid var(--line); }
+.gallery-story { max-width:620px; margin:75px auto; text-align:center; }
+.gallery-story h2 { font-size:clamp(30px,3.2vw,45px); letter-spacing:-.7px; line-height:1.18; margin-bottom:20px; }
+.gallery-story p { max-width:490px; margin:0 auto; font-size:14px; line-height:1.9; }
+.gallery-story .text-link { margin-top:14px; }
+.coffee-editorial { display:grid; grid-template-columns:1fr 1fr;gap:8%;align-items:center; }
+.coffee-editorial .gallery-story { margin:0; text-align:left; }
+.coffee-editorial .gallery-story p { margin:0; }
+@media(max-width:760px){
+ .gallery-composition { gap:22px 16px; }
+ .composition-lead figure:first-child,.composition-reverse figure:last-child { grid-column:span 12; }
+ .gallery-composition figure { grid-column:span 6; }
+ .composition-reverse figure:last-child { grid-row:1; }
+ .composition-pairs figure { grid-column:auto; }
+ .composition-pairs figure:nth-child(even) { margin-top:35px; }
+ .gallery-story { margin:48px auto; }
+ .gallery-chapter + .gallery-chapter { margin-top:56px; padding-top:44px; }
+ .coffee-editorial { grid-template-columns:1fr;gap:32px; }
+ .coffee-editorial .gallery-story { text-align:center; }
+ .coffee-editorial .gallery-story p { margin:auto; }
+ .curated figcaption { font-size:11px; }
+}
+@media(max-width:440px){.composition-pairs{gap:26px 14px}.curated .gallery-open img{aspect-ratio:3/4}}
+
+/* Prueba de luz: franja decorativa contenida en el borde del encabezado. */
+.header::after {
+ content:""; position:absolute; left:0; right:0; bottom:-1px; height:3px;
+ pointer-events:none;
+ background-image:linear-gradient(90deg,transparent,rgba(212,175,124,.18) 28%,#c79c57 46%,#fff1cb 50%,#d5aa6b 54%,rgba(212,175,124,.18) 72%,transparent);
+ background-size:22% 100%; background-repeat:no-repeat; background-position:-30% 0;
+}
+@media(prefers-reduced-motion:no-preference){
+ .header::after { animation:luz-del-borde 8s ease-in-out infinite; }
+ @keyframes luz-del-borde {
+  0%,12% { background-position:-30% 0; opacity:0; }
+  20% { opacity:.85; }
+  78% { opacity:.85; }
+  90%,100% { background-position:130% 0; opacity:0; }
+ }
+}
+@media(prefers-reduced-motion:reduce){.header::after{background:none}}
+
+/* Microinteracciones: respuesta breve, sin animaciones continuas en controles. */
+.button, .menu-toggle, .viewer-caption button {
+  transition: background-color 220ms ease, border-color 220ms ease,
+    color 220ms ease, box-shadow 220ms ease, transform 220ms cubic-bezier(.2,.7,.3,1);
+}
+.text-link, .gallery-filters button, .photo-actions button, #viewer-close,
+nav summary {
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+.button > span, nav summary > span {
+  display:inline-block;
+  transition:transform 220ms cubic-bezier(.2,.7,.3,1);
+}
+.text-link {
+  border-bottom-color:var(--line);
+  background-image:linear-gradient(#98713e,#98713e);
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  background-size:0 1px;
+  transition:background-size 260ms ease, color 180ms ease;
+}
+.text-link:focus-visible { background-size:100% 1px; }
+.menu-toggle[aria-expanded="true"] { border-color:#98713e; }
+.gallery-filters button:focus-visible { border-bottom-color:#98713e; }
+@media(hover:hover) and (pointer:fine) {
+  .button:hover, .menu-toggle:hover, .viewer-caption button:not(:disabled):hover {
+    box-shadow:0 3px 9px rgba(74,44,32,.09);
+  }
+  .menu-toggle:hover, .viewer-caption button:not(:disabled):hover {
+    background-color:var(--sand);border-color:#98713e;
+  }
+  .text-link:hover { background-size:100% 1px; }
+  .gallery-filters button:hover { border-bottom-color:#98713e; }
+  .photo-actions button:hover, #viewer-close:hover, nav summary:hover { color:#826038; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  @media(hover:hover) and (pointer:fine) {
+    .button:hover, .menu-toggle:hover, .viewer-caption button:not(:disabled):hover { transform:translateY(-2px); }
+    .button:hover > span { transform:translate(2px,-2px); }
+  }
+  .button:active, .menu-toggle:active, .viewer-caption button:not(:disabled):active {
+    transform:translateY(0) scale(.985);box-shadow:none;transition-duration:90ms;
+  }
+  nav details[open] > summary > span { transform:rotate(180deg); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .button, .menu-toggle, .viewer-caption button, .text-link,
+  .gallery-filters button, .photo-actions button, #viewer-close, nav summary,
+  .button > span, nav summary > span { transition:none;transform:none; }
+}
