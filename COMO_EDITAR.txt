@@ -1,0 +1,29 @@
+GUÍA PARA EDITAR OR DORÉ
+
+TEXTOS
+- Inicio: index.html
+- Presentación de colecciones: colecciones.html
+- Nuestra empresa: nosotros.html
+- Nuestra esencia: esencia.html
+- Contacto: contactanos.html
+- Títulos, frases y fotos de la galería: galeria.html
+- Nombres, descripciones, aromas e imágenes de productos: Recursos/JS/contenido.js
+
+En contenido.js cada producto tiene su número y sus campos juntos.
+Ejemplo: busca "8" para editar la vela de café.
+Conserva comillas, comas y números de referencia.
+Las colecciones se editan al principio del mismo archivo.
+Los nombres de las fotos y títulos de galería son textos independientes en galeria.html.
+
+DISEÑO
+- Estilos generales existentes y paleta: Recursos/Css/styles.css
+- Ajustes de composición de colecciones y fichas: Recursos/Css/refinements.css
+- Distribución y efecto gris/color de la galería: Recursos/Css/galeria.css
+Los estilos se cargan en este orden; galeria.css afecta solo a la galería.
+
+FUNCIONAMIENTO
+Recursos/JS/Script.js contiene bloques señalados: catálogo, menú, ficha/WhatsApp y galería.
+Normalmente no necesitas tocarlo para editar los productos.
+
+No se añadieron frameworks, paquetes ni pasos de instalación.
+Abre index.html para comprobar los cambios. GitHub no se actualiza hasta hacer commit y push.

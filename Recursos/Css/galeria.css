@@ -1,0 +1,45 @@
+/* GALERÍA: cambia aquí la distribución y el efecto de las fotografías. */
+.ordered-gallery {
+  gap: 40px 28px;
+}
+.ordered-gallery figure {
+  border-bottom: 1px solid var(--soft-line);
+  padding-bottom: 12px;
+}
+.ordered-gallery .gallery-open {
+  overflow: visible;
+}
+.curated .ordered-gallery .gallery-open img {
+  /* Un poco de gris, sin oscurecer. Conserva las dimensiones naturales. */
+  filter: grayscale(.42) saturate(.86);
+  transform: scale(1);
+  transform-origin: center;
+  transition: filter 450ms ease, transform 450ms ease;
+}
+.curated .ordered-gallery .gallery-open:focus-visible img {
+  filter: grayscale(0) saturate(1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .curated .ordered-gallery .gallery-open:hover img {
+    filter: grayscale(0) saturate(1);
+    transform: scale(1.025);
+  }
+}
+@media (hover: none) {
+  /* En pantallas táctiles el color está visible sin depender del mouse. */
+  .curated .ordered-gallery .gallery-open img {
+    filter: none;
+  }
+}
+@media (max-width: 760px) {
+  .ordered-gallery { gap: 30px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .curated .ordered-gallery .gallery-open img {
+    transition: none;
+    transform: none;
+  }
+  .curated .ordered-gallery .gallery-open:hover img {
+    transform: none;
+  }
+}
